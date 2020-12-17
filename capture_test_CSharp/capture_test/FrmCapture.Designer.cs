@@ -43,10 +43,10 @@
             this.rdbtn_fill = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.sizeTrackBar1 = new DevCapture.SizeTrackBar();
             this.ckbox_mosaic = new System.Windows.Forms.CheckBox();
-            this.colorBox1 = new DevCapture.ColorBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.sizeTrackBar1 = new DevCapture.SizeTrackBar();
+            this.colorBox1 = new DevCapture.ColorBox();
             this.captureToolbar1 = new DevCapture.CaptureToolbar();
             this.imageCroppingBox1 = new DevCapture.ImageCroppingBox();
             this.contextMenuStrip1.SuspendLayout();
@@ -211,6 +211,28 @@
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "选择字体";
             // 
+            // ckbox_mosaic
+            // 
+            this.ckbox_mosaic.AutoSize = true;
+            this.ckbox_mosaic.BackColor = System.Drawing.Color.Transparent;
+            this.ckbox_mosaic.ForeColor = System.Drawing.Color.White;
+            this.ckbox_mosaic.Location = new System.Drawing.Point(273, 4);
+            this.ckbox_mosaic.Name = "ckbox_mosaic";
+            this.ckbox_mosaic.Size = new System.Drawing.Size(60, 16);
+            this.ckbox_mosaic.TabIndex = 6;
+            this.ckbox_mosaic.Text = "马赛克";
+            this.ckbox_mosaic.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.Color.Red;
+            this.textBox1.Location = new System.Drawing.Point(45, 171);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 18);
+            this.textBox1.TabIndex = 7;
+            // 
             // sizeTrackBar1
             // 
             this.sizeTrackBar1.BackColor = System.Drawing.Color.Transparent;
@@ -224,18 +246,6 @@
             this.sizeTrackBar1.Text = "sizeTrackBar1";
             this.sizeTrackBar1.Value = 2;
             // 
-            // ckbox_mosaic
-            // 
-            this.ckbox_mosaic.AutoSize = true;
-            this.ckbox_mosaic.BackColor = System.Drawing.Color.Transparent;
-            this.ckbox_mosaic.ForeColor = System.Drawing.Color.White;
-            this.ckbox_mosaic.Location = new System.Drawing.Point(273, 4);
-            this.ckbox_mosaic.Name = "ckbox_mosaic";
-            this.ckbox_mosaic.Size = new System.Drawing.Size(60, 16);
-            this.ckbox_mosaic.TabIndex = 6;
-            this.ckbox_mosaic.Text = "马赛克";
-            this.ckbox_mosaic.UseVisualStyleBackColor = false;
-            // 
             // colorBox1
             // 
             this.colorBox1.Alpha = ((byte)(255));
@@ -247,22 +257,13 @@
             this.colorBox1.TabIndex = 2;
             this.colorBox1.Text = "colorBox1";
             // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.Color.Red;
-            this.textBox1.Location = new System.Drawing.Point(45, 171);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 18);
-            this.textBox1.TabIndex = 7;
-            // 
             // captureToolbar1
             // 
             this.captureToolbar1.BackColor = System.Drawing.Color.Transparent;
-            this.captureToolbar1.Location = new System.Drawing.Point(42, 90);
+            this.captureToolbar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.captureToolbar1.Location = new System.Drawing.Point(45, 73);
             this.captureToolbar1.Name = "captureToolbar1";
-            this.captureToolbar1.Size = new System.Drawing.Size(344, 27);
+            this.captureToolbar1.Size = new System.Drawing.Size(484, 41);
             this.captureToolbar1.TabIndex = 1;
             this.captureToolbar1.ToolButtonClick += new System.EventHandler(this.captureToolbar1_ToolButtonClick);
             // 
@@ -278,7 +279,7 @@
             this.imageCroppingBox1.Name = "imageCroppingBox1";
             this.imageCroppingBox1.PreViewRectangle = new System.Drawing.Rectangle(0, 0, 0, 0);
             this.imageCroppingBox1.SelectedRectangle = new System.Drawing.Rectangle(0, 0, 1, 1);
-            this.imageCroppingBox1.Size = new System.Drawing.Size(517, 358);
+            this.imageCroppingBox1.Size = new System.Drawing.Size(548, 358);
             this.imageCroppingBox1.TabIndex = 0;
             this.imageCroppingBox1.Text = "imageCroppingBox1";
             this.imageCroppingBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.imageCroppingBox1_Paint);
@@ -292,7 +293,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 380);
+            this.ClientSize = new System.Drawing.Size(572, 380);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.captureToolbar1);

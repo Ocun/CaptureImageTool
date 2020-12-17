@@ -17,7 +17,7 @@ namespace DevCapture
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
             this.SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-
+            this.Cursor = System.Windows.Forms.Cursors.Hand; 
             this.BackColor = Color.Transparent;
         }
 
@@ -65,7 +65,7 @@ namespace DevCapture
             set {
                 base.Text = value;
                 Size se = TextRenderer.MeasureText(this.Text, this.Font);
-                this.Width = se.Width + 21;
+                this.Width = se.Width + 35;
             }
         }
 
@@ -113,23 +113,24 @@ namespace DevCapture
             Graphics g = e.Graphics;
             if (m_bMouseEnter) {
                 //g.FillRectangle(Brushes.LightGray, this.ClientRectangle);
-                g.DrawRectangle(Pens.DodgerBlue, new Rectangle(0, 0, this.Width - 1, this.Height - 1));
+             //   g.DrawRectangle(Pens.DodgerBlue, new Rectangle(0, 0, this.Width - 1, this.Height - 1));
             }
-            if (this._Image == null) 
-                g.DrawImage(global::DevCapture.Properties.Resources.src_image_none, new Rectangle(2, 2, 17, 17));
+            if (this._Image == null) { 
+               // g.DrawImage(global::DevCapture.Properties.Resources.src_image_none, new Rectangle(2, 2, 30, 30));
+            }
             else
-                g.DrawImage(this._Image, new Rectangle(2, 2, 17, 17));
+                g.DrawImage(this._Image, new Rectangle(2, 2, 30, 30));
             using (SolidBrush sb = new SolidBrush(this.ForeColor)) {
-                g.DrawString(this.Text, this.Font, sb, 21, (this.Height - this.Font.Height) / 2);
+                g.DrawString(this.Text, this.Font, sb, 35, (this.Height - this.Font.Height) / 2);
             }
-            if (this._IsSelected)
-                g.DrawRectangle(Pens.DarkCyan, new Rectangle(0, 0, this.Width - 1, this.Height - 1));
+            //if (this._IsSelected)
+            //    g.DrawRectangle(Pens.DarkCyan, new Rectangle(0, 0, this.Width - 1, this.Height - 1));
 
             base.OnPaint(e);
         }
 
         protected override void SetBoundsCore(int x, int y, int width, int height, BoundsSpecified specified) {
-            base.SetBoundsCore(x, y, TextRenderer.MeasureText(this.Text, this.Font).Width + 21, 21, specified);
+            base.SetBoundsCore(x, y, TextRenderer.MeasureText(this.Text, this.Font).Width + 35, 35, specified);
         }
     }
 }

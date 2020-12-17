@@ -319,7 +319,7 @@ namespace DevCapture
             g.DrawRectangle(Pens.Cyan, this._SelectedRectangle.Left, this._SelectedRectangle.Top, this._SelectedRectangle.Width - 1, this._SelectedRectangle.Height - 1);
             foreach (Rectangle rect in m_rectDots)
                 g.FillRectangle(Brushes.Yellow, rect);
-            string str = string.Format("大小: {0} * {1}",
+            string str = string.Format("{0}  {1}",
                 this._SelectedRectangle.Width, this._SelectedRectangle.Height);
             Size szStr = g.MeasureString(str, this.Font).ToSize();
             Point ptStr = new Point(this._SelectedRectangle.Left, this._SelectedRectangle.Top - szStr.Height - 5);
@@ -375,9 +375,7 @@ namespace DevCapture
                 g.DrawRectangle(pen, rect.X + (bmpNew.Width >> 1) - 1, rect.Y + (bmpNew.Height >> 1) - 1, 8, 8);
 
             }
-            string strDraw = "size:" + (this._SelectedRectangle.Width) + " * " + (this._SelectedRectangle.Height)
-                + "\r\n" + clr.A + "," + clr.R + "," + clr.G + "," + clr.B
-                + "\r\n0x" + clr.A.ToString("X").PadLeft(2, '0') + clr.R.ToString("X").PadLeft(2, '0') + clr.G.ToString("X").PadLeft(2, '0') + clr.B.ToString("X").PadLeft(2, '0');
+            string strDraw = $@"POS:({pt.X} , {pt.Y}){Environment.NewLine}RGB:({clr.A},{clr.R},{clr.G},{clr.B})";
             g.DrawString(strDraw, this.Font, Brushes.White, rect.X + 3, rect.Y + 6 + bmpNew.Height);
             sb.Color = clr;
             g.FillRectangle(sb, rect.Right - 11, rect.Bottom - 11, 9, 9);

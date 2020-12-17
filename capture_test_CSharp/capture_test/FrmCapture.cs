@@ -780,7 +780,7 @@ namespace DevCapture
         //设置工具条位置
         private void SetToolBarLocation()
         {
-            this.captureToolbar1.Location = new Point(imageCroppingBox1.SelectedRectangle.Left, imageCroppingBox1.SelectedRectangle.Bottom + 5);
+            this.captureToolbar1.Location = new Point(imageCroppingBox1.SelectedRectangle.Right - this.captureToolbar1.Width, imageCroppingBox1.SelectedRectangle.Bottom + 5);
             int nBottom = captureToolbar1.Bottom + (panel1.Visible ? panel1.Height + 5 : 0);
             if (this.captureToolbar1.Right > this.Width)
             {
